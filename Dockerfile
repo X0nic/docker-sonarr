@@ -28,10 +28,6 @@ RUN chown -R nobody:users /opt/NzbDrone \
   ; mkdir -p /config \
   && chown -R nobody:users /config
 
-RUN apt-get update -q
-RUN apt-get install -qy libmono-cil-dev nzbdrone
-RUN chown -R nobody:users /opt/NzbDrone
-
 VOLUME /config
 VOLUME /downloads
 VOLUME /tv
