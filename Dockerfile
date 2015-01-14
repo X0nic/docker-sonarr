@@ -5,9 +5,7 @@ ENV HOME /root
 ENV TERM screen
 MAINTAINER x0nic <nathan@globalphobia.com>
 
-#Name and Version
-ENV CNAME nzbdrone
-ENV CVER 2.0.0.2594
+ENV SONARR_VERSION 2.0.0.2594
 
 # Use baseimage-docker's init system
 CMD ["/sbin/my_init"]
@@ -16,7 +14,7 @@ CMD ["/sbin/my_init"]
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys FDA5DFFC \
   && echo "deb http://apt.sonarr.tv/ master main" | tee -a /etc/apt/sources.list \
   && apt-get update -q \
-  && apt-get install -qy $CNAME=$CVER \
+  && apt-get install -qy nzbdrone=$SONARR_VERSION \
   ; apt-get clean \
   ; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
