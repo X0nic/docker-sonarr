@@ -12,10 +12,6 @@ ENV CVER 2.0.0.2594
 # Use baseimage-docker's init system
 CMD ["/sbin/my_init"]
 
-# Fix a Debianism of the nobody's uid being 65534
-RUN usermod -u 99 nobody
-RUN usermod -g 100 nobody
-
 # Use specified version of sonarr for more consistent builds
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys FDA5DFFC \
   && echo "deb http://apt.sonarr.tv/ master main" | tee -a /etc/apt/sources.list \
