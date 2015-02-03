@@ -5,7 +5,7 @@ ENV HOME /root
 ENV TERM screen
 MAINTAINER x0nic <nathan@globalphobia.com>
 
-ENV SONARR_VERSION 2.0.0.2663
+ENV SONARR_VERSION 2.0.0.2788
 
 # Use baseimage-docker's init system
 CMD ["/sbin/my_init"]
